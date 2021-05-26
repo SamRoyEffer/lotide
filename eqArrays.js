@@ -11,23 +11,25 @@ const assertEqual = function(actual, expected) {
 const eqArrays = function(array1, array2){
   let firstArray = array1;
   let secArray = array2;
-
-  for (let i = 0; i < firstArray.length; i++){
-    for (let j = 0; j < secArray.length; j++){
-      if (secArray.length[j] === firstArray.length[i]) {
-        
-        return true;
-      } else {
-        return false;
-      }
-    }
+  if (secArray.length !== firstArray.length){
+    return false
   }
+  for(let i = 0; i < firstArray.length; i++){
+    if (firstArray[i] !== secArray[i]){
+      console.log(firstArray[i], secArray[i])
+      return false
+    } 
+  }
+  console.log(firstArray, secArray)
+  return true
+
+
 }
 
-// console.log(eqArrays([1, 2, 3], [1, 2, 3])) // => true
-// console.log(eqArrays([1, 2, 3], [3, 2, 1])) // => false
+eqArrays([1, 2, 3], [1, 2, 3]) // => true
+eqArrays([1, 2, 3], [3, 2, 1]) // => false
 
-// console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => false
+eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
+eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
 
-console.log(assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true)); 
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); 
