@@ -1,19 +1,23 @@
-const words = ["cat", "dog", "coffee", "tree", "sand"];
-const map = function(array, charmander) {
+const eqArrays = require('./eqArrays')
+const assertArraysEqual = require('./assertArraysEqual')
+
+// const words = ["cat", "dog", "coffee", "tree", "sand"];
+const map = function(array, name) {
   const results = [];
   for (let item of array) {
-    console.log('item BEFORE: ', item);
-    console.log('item AFTER: ', charmander(item));
-    console.log('---');
-    results.push(charmander(item));
+    results.push(name(item));
   }
   return results;
 };
+
+
+module.exports = map
+//assertArraysEqual(map(["sam","char","mom"],word => word[0]),["s", "c", "m"])
 // const rez = map(words, word => word[0]);
 // console.log(rez)
 
 
-const eqArrays = function(array1, array2){
+/*const eqArrays = function(array1, array2){
   if (array2.length !== array1.length) {
     return console.log(false);
   }
@@ -40,6 +44,5 @@ const assertArraysEqual = function(array1, array2){
   }
   console.log(`✅✅✅ Assertion Passed: ${firstArray} === ${secArray}`);
 
-}
+}*/
 
-assertArraysEqual(map(["sam","char","mom"],word => word[0]),["s", "c", "m"])

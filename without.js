@@ -1,4 +1,24 @@
-const assertArraysEqual = function(array1, array2){
+const assertArraysEqual = require('./assertArraysEqual')
+const eqArrays = require('./eqArrays')
+
+
+const without = function(sourceArray, itemsToRemove){
+  let values = []
+  for (let i = 0; i < sourceArray.length; i++){
+    if(sourceArray[i] !== itemsToRemove[i]){
+      //console.log("Console.log 1", sourceArray);
+      values.push(sourceArray[i]);
+    } 
+  }
+  //console.log("Console.log values", values);
+  return values;
+}
+console.log(without([1, 2, 3], [1])) // => [2, 3]
+console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+
+
+
+/*const assertArraysEqual = function(array1, array2){
   let firstArray = array1;
   let secArray = array2;
   if (secArray.length !== firstArray.length){
@@ -27,19 +47,7 @@ const eqArrays = function(array1, array2){
     } 
   }
   return console.log(true);
-}
+}*/
 
 
-const without = function(sourceArray, itemsToRemove){
-  let values = []
-  for (let i = 0; i < sourceArray.length; i++){
-    if(sourceArray[i] !== itemsToRemove[i]){
-      //console.log("Console.log 1", sourceArray);
-      values.push(sourceArray[i]);
-    } 
-  }
-  //console.log("Console.log values", values);
-  return values;
-}
-console.log(without([1, 2, 3], [1])) // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+

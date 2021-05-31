@@ -1,4 +1,6 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = require('./assertEqual')
+
+/*const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
 
@@ -6,7 +8,7 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-
+*/
 
 
 //take a sting, seperate it and count the individual letters
@@ -21,7 +23,6 @@ const countLetters = function(scentence) {
   }
   return results;
 };
+module.exports = countLetters
 
-
-
-console.log((countLetters("Hello my name is what")));
+//console.log((countLetters("Hello my name is what")));

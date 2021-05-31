@@ -14,6 +14,6 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-
-console.log(letterPositions("hello"));
-console.log(letterPositions("My name is WHAT?!"));
+module.exports = letterPositions
+// console.log(letterPositions("hello"));
+// console.log(letterPositions("My name is WHAT?!"));
