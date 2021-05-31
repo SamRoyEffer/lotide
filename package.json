@@ -1,0 +1,26 @@
+{
+  "name": "lotide_project",
+  "version": "1.0.0",
+  "description": "a folder of files containing useful functions",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamRoyEffer/lotide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamRoyEffer/lotide/issues"
+  },
+  "homepage": "https://github.com/SamRoyEffer/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0"
+  }
+}
