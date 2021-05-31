@@ -3,11 +3,15 @@ const assertEqual = require('./assertEqual')
 
 
 const tail = function(array) {
+  const first = [];
+  
   if (array === []) {
-    return undefined
+    return undefined;
   } else {
-  return array.shift;
+  
+  first.push(array.shift());
   };
+  return array;
 };
 
 module.exports = tail
