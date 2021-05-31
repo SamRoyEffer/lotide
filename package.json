@@ -1,5 +1,5 @@
 {
-  "name": "lotide_project",
+  "name": "@samroyeffer/lotide",
   "version": "1.0.0",
   "description": "a folder of files containing useful functions",
   "main": "assertArraysEqual.js",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/SamRoyEffer/lotide.git"
   },
-  "author": "",
+  "author": "Sam Roy-Effer <samroyeffer@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SamRoyEffer/lotide/issues"

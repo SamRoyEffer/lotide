@@ -1,7 +1,7 @@
 const letterPositions = function(sentence) {
   const results = {};
   for (let position in sentence) {
-    const key = sentence[position];//letter in the sentence
+    const key = sentence[position];
     if (key !== ' ') {
       if (results[key]) {
         console.log(sentence[position]);
@@ -14,6 +14,4 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-module.exports = letterPositions
-// console.log(letterPositions("hello"));
-// console.log(letterPositions("My name is WHAT?!"));
+module.exports = letterPositions;
