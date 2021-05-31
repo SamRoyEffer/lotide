@@ -1,16 +1,13 @@
 // function implementation
-const assertEqual = require("./assertEqual")
+const assertEqual = require('./assertEqual')
+
 
 const head = function(array) {
-  
-  if (array === []) {
-    return undefined;
-  } else {
-    return array[0];
-  }
+  return array[0];
   
 };
 
+module.exports = head
 
-
-module.exports = head;
+assertEqual(head([5,6,7]), 5);
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");

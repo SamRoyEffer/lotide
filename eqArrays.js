@@ -1,14 +1,14 @@
 const eqArrays = function(array1, array2){
   if (array2.length !== array1.length) {
-    return console.log(false);
+    return false;
   }
   for(let i = 0; i < array1.length; i++){ 
     if (array1[i] !== array2[i]){
       
-      return console.log(false);
+      return false
     } 
   }
-  return console.log(true);
+  return true;
 };
 
 module.exports = eqArrays
